@@ -38,7 +38,7 @@ repos:
           --follow-imports=skip
         ]
 
-  # security checker
+  # security linter
   - repo: https://github.com/PyCQA/bandit
     rev: 1.7.8
     hooks:
