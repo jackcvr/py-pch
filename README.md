@@ -1,4 +1,4 @@
-# My python pre-commit hooks
+# Python pre-commit hooks
 
 ```
 repos:
@@ -11,19 +11,13 @@ repos:
       - id: end-of-file-fixer
       - id: check-ast
       - id: check-yaml
+        args: [--unsafe]
       - id: check-json
       - id: check-toml
       - id: debug-statements
       - id: check-added-large-files
 
-  # imports sorting
-  - repo: https://github.com/pycqa/isort
-    rev: 5.13.2
-    hooks:
-      - id: isort
-        args: [--profile, black]  # use black as the most compatible with ruff
-
-  # linter and formatter
+  # linter and formatter (Drop-in parity with Flake8, isort, and Black)
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.3.4
     hooks:
@@ -50,5 +44,4 @@ repos:
     hooks:
       - id: bandit
         exclude: tests/
-
 ```
