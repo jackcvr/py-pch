@@ -1,3 +1,6 @@
+# My python pre-commit hooks
+
+```
 repos:
 
   # common useful hooks
@@ -47,3 +50,5 @@ repos:
     hooks:
       - id: bandit
         exclude: tests/
+
+```
